@@ -1,0 +1,44 @@
+.main{
+    width:100%;
+   
+    display:flex;
+    justify-content:center;
+    margin-top:20vh;
+   
+   
+   
+    
+    
+}
+
+.svg{
+    margin-top:30px;
+    overflow:visible;
+    height:3vh;
+    width:3vw;
+    animation-name:svg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    fill:grey;
+    animation-direction: linear;
+    
+    
+
+    
+    
+    
+}
+
+@keyframes svg {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    
+}
+
+  
+
+

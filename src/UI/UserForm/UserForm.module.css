@@ -1,0 +1,28 @@
+.main{ 
+    width:40vh; 
+    height:40vh; 
+    border-radius:12px;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+}
+
+.input{ 
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 90%;
+    height:5vh;
+}
+
+.text1{ 
+    color:black;
+
+}
+
+.text{
+    color:black;
+}

@@ -1,0 +1,56 @@
+.main{ 
+    margin-top:20vh;
+    width:100%; 
+    height:150vh;
+    background-color: rgb(219, 223, 226);
+    display:flex;
+    justify-content: center;
+}
+
+.items{ 
+    width:40%; 
+    height: auto; 
+    background-color: white;
+    border-radius:14px;
+    margin-right:15px;
+   
+}
+
+.payment{ 
+    padding-top:30px;
+    width:20%; 
+    height:45vh; 
+    background-color: white;
+    border-radius:14px;
+    display:flex; 
+    flex-direction:column;
+    align-items:center;
+    
+    overflow: hidden;
+    
+
+}
+.line{ 
+    width:100%;
+    height:1px;
+    background-color: rgb(198, 193, 193);
+    margin-top:2px;
+
+}
+
+.info{ 
+    width:90%;
+    
+     
+}
+
+.string{ 
+    width:90%;
+    margin-top:1rem;
+    font-size:10px;
+    display:flex;
+    justify-content:space-between;
+    
+
+}
+

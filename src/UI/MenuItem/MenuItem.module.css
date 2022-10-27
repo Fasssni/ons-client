@@ -1,0 +1,46 @@
+.item{ 
+    color:white;
+    margin-left:10vh;
+    margin-top:10px;
+    border-bottom: 1px solid white;
+    margin-right:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+.container{ 
+    display:flex; 
+    flex-direction:column;
+    width:100%;
+
+}
+
+
+
+.added{ 
+    background-color:white;
+    width:40vw;
+    height:auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position:absolute;
+    left:98%;
+    padding:15px 10px;
+    border-radius:12px;
+    scroll-behavior: auto;
+    
+    
+    
+}
+.additions{ 
+    margin-top:5px;
+    width:100%;
+    font-size:14px;
+    border-bottom:0.5px solid #0072ff;
+}
+
+.additions:hover{
+    color:white;
+    background:#0072ff;
+    cursor:pointer;
+}

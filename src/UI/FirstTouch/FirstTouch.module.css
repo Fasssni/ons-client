@@ -1,0 +1,17 @@
+.box{ 
+    width: 70%;
+    height:70%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.down{ 
+    height:100%;
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left:22%;
+
+}
+

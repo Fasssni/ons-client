@@ -1,0 +1,59 @@
+.main{ 
+    display:flex;
+    align-items: center;
+    overflow:visible;
+    
+}
+
+
+.input{ 
+    width: 15vw;
+    
+    outline: none;
+   
+   
+  
+
+ 
+ 
+
+}
+
+.svg{ 
+    fill:black;
+    overflow:visible;
+    width: 35px;
+    margin-top:-3vh;
+    cursor:pointer;
+
+}
+.list{ 
+    background:rgb(255, 255, 255);
+    cursor:pointer;
+    overflow: visible;
+    position:absolute;
+    width:15vw;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+
+.list__none{ 
+    position:absolute;
+    display:none;
+    pointer-events: none;
+    
+}
+
+.p:hover{ 
+    background-color: #0072ff;
+    color:white;
+}
+
+.BTN{ 
+    width:fit-content;
+    color:transparent;
+    background-color: transparent;
+    border:0;
+    cursor:pointer;
+}

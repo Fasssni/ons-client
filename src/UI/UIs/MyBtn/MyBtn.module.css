@@ -1,0 +1,22 @@
+.chosen{
+    padding:5px 15px;
+    border: 1px solid black;
+    border-radius:8px;
+    cursor: pointer;
+    color:rgb(62, 60, 60);
+    margin-right:5%;
+    
+
+}
+
+.nonChosen{ 
+    padding:5px 15px;
+    border: 1px solid none;
+    border-radius:8px;
+    cursor: pointer;
+    color:white;
+    background:#0072ff;
+    border-width:0;
+    margin-right:5%;
+
+}

@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{ 
+    
+    -webkit-font-smoothing: antialiased;
+    color: #1a2b49;
+    font-family:  Lato,sans-serif;
+    font-size: 13px;
+    
+   
+
+}
+
+a{ 
+    color:inherit;
+    text-decoration: none;
+}
