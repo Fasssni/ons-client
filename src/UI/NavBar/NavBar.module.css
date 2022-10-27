@@ -30,18 +30,6 @@
 }
 
 
-.logo{
-    color:#0072ff;
-    font-family: inherit;
-    margin-left:max(1vw);
-    margin-left:5vw;
-    font-weight: 500;
-    font-size: 26px;
-    overflow: hidden;
-    font-weight:26px;
-    
-
-}
 
 .NavBar{
     display:flex;
@@ -62,10 +50,32 @@
 }
 .li:hover{
     color:#0072ff;
+
+}
+
+.btn{
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  padding: 6px 36px;
+  transition: none;
+  background-color: #0072ff;
+  color: #fff;
+  cursor:pointer;
+  margin-right:4%;
+}
+
+.svg{ 
+   
+  margin-left:60px;
+  cursor:pointer;
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .NavBar{
         display:flex;
         justify-content: space-between;
@@ -73,25 +83,39 @@
         flex-direction:column;
         
         transition: 3s;
+
      
+    }
+
+    .logo{
+      display:none;
+    }
+
+    .btn{
+      border:none;
+      color:#0072ff;
+      background-color: transparent;
+      width:40px;
+    }
+
+    .svg{
+      margin-left:5px;
+    }
+
+    .li{
+      font-size:2vh;
+    }
+
+    .NavBar{
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
     }
   
   }
 
-  .btn{
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 700;
-    height: 40px;
-    padding: 6px 36px;
-    transition: none;
-    background-color: #0072ff;
-    color: #fff;
-    cursor:pointer;
-    margin-right:4%;
-  }
+  
   .icon{ 
     position: relative;
     width:44px;
@@ -135,8 +159,3 @@
     height:50px;
   }
 
-  .svg{ 
-   
-    margin-left:60px;
-    cursor:pointer;
-  }

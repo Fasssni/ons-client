@@ -44,7 +44,7 @@ const MyBurgerMenu=({theme,setTheme})=>{
         <div className={theme?cl.main:cl.change} onClick={(e)=>e.stopPropagation()}>
             {
                 catalog.map((p)=>
-                <MenuItem p={p}></MenuItem>
+                <MenuItem p={p} theme={theme}></MenuItem>
                 )
             }
            

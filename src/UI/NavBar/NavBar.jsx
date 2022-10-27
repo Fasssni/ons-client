@@ -50,10 +50,10 @@ const NavBar=({setSearched,list, setTheme,theme,men, setMenu,authMenu,search,set
     <path d="M41,14H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,14Z" fill=" #0072ff"/>
     <path d="M41,26H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,26Z" fill=" #0072ff"/>
     <path d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z" fill=" #0072ff"/>
-</svg>
+</svg> 
 
         
-             <svg width="40px" height="40px" fill="#0072ff"  viewBox="0 0 48 48">
+             <svg className={cl.logo} width="40px" height="40px" fill="#0072ff"  viewBox="0 0 48 48">
                
                     <path  d={LOGO}/>
                  

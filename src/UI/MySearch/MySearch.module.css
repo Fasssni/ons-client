@@ -57,3 +57,13 @@
     border:0;
     cursor:pointer;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .main{
+        display:none;
+        width:0;
+     
+    }
+  
+  }

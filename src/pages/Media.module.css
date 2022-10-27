@@ -89,3 +89,26 @@
     letter-spacing: -.1px;
     white-space: nowrap
 }
+
+
+
+@media only screen and (max-width:900px){
+    .block{ 
+       width:100%;
+       height:auto;
+   }
+
+   .left{
+    width:60%; 
+
+   }
+
+   .right{ 
+    width:40%;
+   }
+
+   .posts_main{
+    height:auto;
+   }
+    
+}
