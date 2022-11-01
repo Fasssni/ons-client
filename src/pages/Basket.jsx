@@ -18,6 +18,9 @@ export const Basket=()=> {
             <div className={cl.items}>
                 {basket.items.length==0?
                 <h3 style={{
+                    marginTop:"20px",
+                    marginBottom:"20px",
+
                     marginRight:"auto",
                     marginLeft:"20%"}}> У вас пока нет товаров в корзине</h3>
                 :

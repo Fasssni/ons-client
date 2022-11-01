@@ -33,12 +33,12 @@ export const PaymentForm=({...props})=>{
 
     return( 
         <div className={cl.main}>
-            <img className={cl.img} src={props.p.img}/>
-            <div>
+            <img className={cl.img} src={props.p.img} style={{width:"40px"}}/>
+            <div style={{width:"130px"}}>
                 <h3 className={cl.title}>{props.p.title}</h3>
                 <p className={cl.description}>{props.p.description.slice(0,35)}</p>
             </div> 
-            <h3>{props.p.price}Р </h3>
+            <h3 style={{width:"10px"}}>{props.p.price}Р </h3>
             <div className={cl.changed}>
                 <button onClick={()=>setCounter((prevCounter)=>prevCounter-1)} className={cl.btn}>-</button>
                 <span style={{color:"black"}}>{count}</span>

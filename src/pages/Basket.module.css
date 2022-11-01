@@ -54,3 +54,27 @@
 
 }
 
+@media only screen and (max-width: 750px) {
+   .main{ 
+    display: flex;
+    flex-direction: column;
+   justify-content: start;
+    align-items: center;
+    margin-top: 20vh;
+ 
+   }
+
+   .payment{ 
+    width:75%;
+    height:auto;
+    margin-top:1rem;
+    padding-bottom:10px;
+   }
+
+   .items{ 
+    margin-right:0;
+    width:75%;
+    border-radius:14px;
+   }
+
+}
