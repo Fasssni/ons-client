@@ -74,6 +74,7 @@ const Shop=({theme,search, list, setTheme,searched})=>{
         
     
     }
+    
      
              
      

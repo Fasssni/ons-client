@@ -36,7 +36,7 @@ export const PaymentForm=({...props})=>{
             <img className={cl.img} src={props.p.img} style={{width:"40px"}}/>
             <div style={{width:"130px"}}>
                 <h3 className={cl.title}>{props.p.title}</h3>
-                <p className={cl.description}>{props.p.description.slice(0,35)}</p>
+                {/* <p className={cl.description}>{props.p.description.slice(0,35)}</p> */}
             </div> 
             <h3 style={{width:"10px"}}>{props.p.price}Р </h3>
             <div className={cl.changed}>

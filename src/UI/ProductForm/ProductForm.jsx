@@ -1,13 +1,17 @@
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ModalAdd } from "../ModalAdd";
 import { MyButton } from "../UIs/MyButton/MyButton";
+import axios from "axios";
+
 
 import cl from "./ProductForm.module.css"
 
+const ProductFor=({...props})=>{
 
-export const ProductForm=({...props})=>{
+   
+
 
     const [change,setChange]=useState(false);
     const [counter, setCounter]=useState(0)
@@ -18,47 +22,42 @@ export const ProductForm=({...props})=>{
 
     const basket=useSelector(state=>state.basket)
 
-    const addToBasket=(p,counter)=>{ 
+    props.p["card"]=false
+   
+
+
+   async function addToBasket(p,counter){ 
+        
+     
+        props.p["card"]=true
+
+        p['count']=0;
+        dispatch({ 
+            type:"ADD_ITEM",payload:props.p
+        })
+       
+        setChange(true)
+        setCounter((prevCounter)=>prevCounter+1)
+
+       
+        
+        
+       
+     
+
   
-    setChange(true)
-    setCounter((prevCounter)=>prevCounter+1)
-    dispatch({ 
-        type:"ADD_ITEM",payload:p
-    })
     
 
     return(
-        console.log(basket)
+        console.log(counter)
     )
 }
 
-const add=(p, count)=> { 
-    setChange(true)
-
-    setCounter((prevCounter)=>prevCounter+1)
 
 
-    dispatch({ 
-        type:"ADD_ITEM",payload:{p:p,count:count}
-    })
-
-    console.log("ADD Worked")
-    
-}
-
-const remove=(p, count)=> { 
-    setChange(true)
-
-    setCounter((prevCounter)=>prevCounter-1)
 
 
-    dispatch({ 
-        type:"ADD_ITEM",payload:{p:p,count:count}
-    })
 
-    console.log("REMOVE Worked")
-    
-}
 
     const check=()=>{ 
         if(counter<0){ 
@@ -69,7 +68,28 @@ const remove=(p, count)=> {
        return(counter)}
 
 
-    const count=useMemo(()=>check(),[counter])
+    const initialRender=useRef(true)
+
+    useEffect(()=>{
+        if(initialRender.current){
+        initialRender.current=false
+        } else{
+            dispatch({ 
+            type:"COUNT",payload:{id:props.p.id,counter:counter}
+        })
+            
+            console.log("the result is",counter)
+        }
+        
+
+    },[counter])
+
+    useEffect(()=>
+    {
+      check()
+    }, [counter])
+
+    
 
     return( 
 
@@ -89,7 +109,7 @@ const remove=(p, count)=> {
 
              <div className={cl.changed}>
                 <button onClick={()=>setCounter((prevCounter)=>prevCounter-1)} className={cl.btn}>-</button>
-                <span>{count}</span>
+                <span>{counter}</span>
                 <button onClick={()=>setCounter((prevCounter)=>prevCounter+1)} className={cl.btn}>+</button> 
                     
              </div>
@@ -103,7 +123,7 @@ const remove=(p, count)=> {
                  
                 
             }}
-                 onClick={event=>addToBasket(props.p)}>
+                 onClick={event=>addToBasket(props.p, counter)}>
                                                      В корзину
              </MyButton> }
              </div>
@@ -129,7 +149,7 @@ const remove=(p, count)=> {
 
              <div className={cl.changed}>
                 <button onClick={()=>setCounter((prevCounter)=>prevCounter-1)} className={cl.btn}>-</button>
-                <span>{count}</span>
+                <span>{counter}</span>
                 <button onClick={()=>setCounter((prevCounter)=>prevCounter+1)} className={cl.btn}>+</button> 
                     
              </div>
@@ -156,3 +176,5 @@ const remove=(p, count)=> {
    </div>
     )
 }
+
+export const ProductForm=memo(ProductFor)

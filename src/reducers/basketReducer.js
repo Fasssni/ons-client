@@ -4,7 +4,7 @@ const defaultState={
    
         items:[], 
 
-        total:0,
+        total:parseInt(0),
 
         userInfo:[{name:"Insaf",mail:"sadikovisaf@99gmail.com", address:"Kazan"}]
 
@@ -17,16 +17,19 @@ const defaultState={
 export const basketReducer=(state=defaultState,action)=>{ 
     switch(action.type){
         case "ADD_ITEM":
+            
+            
+
             return{
                 ...state,
-                items:[...state.items, action.payload],
-                total:parseInt(state.total)+parseInt(action.payload.price)
+                items:[...state.items,action.payload],
+                
             }
         case "REMOVE_ITEM":
             return{
                 ...state,
                 items:state.items.filter((e)=>e.id!==action.payload.id),
-                total:parseInt(state.total)-parseInt(action.payload.price)
+                total:parseInt(state.total)
             }
 
         case "GET_USER":
@@ -37,9 +40,31 @@ export const basketReducer=(state=defaultState,action)=>{
             }
 
         case "COUNT":
+
+            let count 
+
+            state.items.map((item)=>item.id==action.payload.id
+                ?item.count=action.payload.counter
+                 
+                :item
+            )
+            console.log(state.items)
+            // state.items.map((item)=>item.id==action.payload.id?item.count=action.payload.counter:1)
+              
+            let amount=0
+            
+            
+
              return{ 
-                ...state, 
-                total:state.total-parseInt(action.payload.price)+parseInt(action.payload.price*action.payload.count)
+                ...state,
+                
+                total:state.items.map((p)=>{
+                   
+                    
+                    amount=parseInt(amount)+ +Number(parseInt(p.count)*parseInt(p.price))
+                    return(parseInt(amount))
+                    }
+                    )
              }
 
         default:
