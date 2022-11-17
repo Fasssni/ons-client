@@ -1,4 +1,8 @@
 import img from "../img/example.jpg"
+import { loadState } from "../localStorage"
+
+
+const loadedState=loadState()
 
 const defaultState={ 
    
@@ -6,7 +10,11 @@ const defaultState={
 
         total:parseInt(0),
 
-        userInfo:[{name:"Insaf",mail:"sadikovisaf@99gmail.com", address:"Kazan"}]
+        userInfo:[{name:"Insaf",mail:"sadikovisaf@99gmail.com", address:"Kazan"}],
+
+        loadState
+
+
 
        
         

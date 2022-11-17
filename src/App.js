@@ -22,6 +22,8 @@ import { Crm } from "./UI/CRM/Crm";
 import { Catalog1 } from "./pages/Catalog1";
 import { Catalog2 } from "./pages/Catalog2";
 import { Media } from "./pages/Media";
+import { store } from "./reducers";
+import { saveState } from "./localStorage";
 
 
 
@@ -45,6 +47,16 @@ function App() {
   
   
   const {device}=useContext(Context)
+
+  store.subscribe(()=>{ 
+    saveState( 
+        { 
+          items: store.rootState.getState().items,
+          total: store.rootState.getState().total,
+          userInfo: store.rootState.getState().userInfo,
+        }
+    )
+})
   
 
   const dev=device.devices

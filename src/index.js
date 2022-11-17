@@ -6,6 +6,7 @@ import DeviceStore from "./store/DeviceStore";
 import {Provider} from "react-redux"
 import { REACT_APP_API_URL } from './consts/consts';
 import { store } from './reducers';
+import { saveState } from './localStorage';
 
 
 
@@ -15,6 +16,8 @@ import { store } from './reducers';
 export const Context = createContext()
 
 const root=ReactDOM.createRoot(document.getElementById("root"))
+
+
 
 root.render(
     <Provider store={store}>
