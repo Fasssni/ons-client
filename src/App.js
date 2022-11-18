@@ -48,15 +48,15 @@ function App() {
   
   const {device}=useContext(Context)
 
-  store.subscribe(()=>{ 
-    saveState( 
-        { 
-          items: store.rootState.getState().items,
-          total: store.rootState.getState().total,
-          userInfo: store.rootState.getState().userInfo,
-        }
-    )
-})
+//   store.subscribe(()=>{ 
+//     saveState( 
+//         { 
+//           items: store.rootState.getState().items,
+//           total: store.rootState.getState().total,
+//           userInfo: store.rootState.getState().userInfo,
+//         }
+//     )
+// })
   
 
   const dev=device.devices

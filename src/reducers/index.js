@@ -11,4 +11,4 @@ const rootReducer=combineReducers({
 
 })
 
-export const store=createStore(rootReducer, loadedState)
+export const store=createStore(rootReducer)

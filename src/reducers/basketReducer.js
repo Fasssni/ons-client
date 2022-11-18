@@ -34,10 +34,29 @@ export const basketReducer=(state=defaultState,action)=>{
                 
             }
         case "REMOVE_ITEM":
+
+            let sum
+
             return{
                 ...state,
                 items:state.items.filter((e)=>e.id!==action.payload.id),
-                total:parseInt(state.total)
+                total:
+                    
+                 !state.items?
+                    
+                   state.items?.map((p)=>{
+                   
+                    
+                    sum=parseInt(sum)+ +Number(parseInt(p.count)*parseInt(p.price))
+                    return(parseInt(sum))
+                    }
+                    )
+
+                    :
+                    0
+                    
+             
+
             }
 
         case "GET_USER":
